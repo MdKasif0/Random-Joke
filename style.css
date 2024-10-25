@@ -1,0 +1,129 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif, 'Arial', sans-serif;
+    background-color: #DCDCDC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 1s ease;
+    margin: 0;
+}
+
+.app-container {
+    display: flex;
+    align-items: center;
+    background: ghostwhite;
+    padding: 5vw;
+    border-radius: 5vw;
+    box-shadow: 0 10vw 20vw rgba(0, 0, 0, 0.1);
+    width: 90vw;
+    text-align: center;
+    transition: background-color 1s ease;
+    position: absolute;
+    margin: 35vh 0vw 0vw 0vw;
+}
+
+.joke-box {
+    width: 100%;
+    position: relative;
+}
+
+.joke-title {
+    font-size: 7vw;
+    color: black;
+    margin-bottom: 8vw;
+}
+
+#joke-text {
+    font-size: 4vw;
+    color: #1D1D1D;
+    min-height: 8vh;
+    margin-bottom: 10vw;
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards; /* fade-in effect */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.joke-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 2vw 4vw;
+    border-radius: 2vw;
+    font-size: 4vw;
+    cursor: pointer;
+    transition: background-color 1.5s ease, transform 1.5s ease;
+}
+
+.joke-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.theme-toggle {
+    margin: 5vw 0vw 100vw 55vw;
+    padding: 2vw 1vw;
+    background-color: #007bff;
+    color: ghostwhite;
+    border-radius: 2vw;
+    cursor: pointer;
+    border: none;
+    font-size: 4vw;
+    transition: background-color 1.5s ease, color 1.5s ease, transform 1.5s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.05);
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: black;
+}
+
+.dark-mode .app-container {
+    background-color: #1D1D1D;
+    color: ghostwhite;
+}
+
+.dark-mode .joke-title {
+    color: ghostwhite;
+}
+
+.dark-mode #joke-text {
+    color: ghostwhite;
+}
+
+.dark-mode .joke-btn {
+    background-color: black;
+    color: darkorange;
+    border: 0.5vw solid darkorange;
+}
+
+.dark-mode .joke-btn:hover {
+    background-color: darkorange;
+    color: black;
+    border: 0.5vw solid black;
+}
+
+.dark-mode .theme-toggle {
+    background-color: black;
+    color: darkorange;
+    border: 0.5vw solid darkorange;
+}
+
+/* Animation for joke fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
